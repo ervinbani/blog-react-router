@@ -1,6 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const LoginPage: React.FC = () => {
   const { login } = useAuth();
@@ -8,7 +8,7 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = () => {
     login();
-    navigate('/admin');
+    navigate("/admin");
   };
 
   return (
