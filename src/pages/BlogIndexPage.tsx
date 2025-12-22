@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { posts } from '../lib/posts';
+import React from "react";
+import { Link } from "react-router-dom";
+import { posts } from "../lib/posts";
 
 const BlogIndexPage: React.FC = () => {
   return (
