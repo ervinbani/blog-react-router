@@ -9,7 +9,6 @@ import BlogPostPage from "./pages/BlogPostPage";
 import AdminPage from "./pages/AdminPage";
 import ProtectedRoute from "./pages/ProtectedRoute";
 
-
 import "./App.css";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -18,19 +17,40 @@ function App() {
   const location = useLocation();
   return (
     <div>
-      <nav style={{ marginBottom: '1.5rem' }}>
-        <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none', padding: 0 }}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/products">Products</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
+      <nav style={{ marginBottom: "1.5rem" }}>
+        <ul
+          style={{
+            display: "flex",
+            gap: "1rem",
+            listStyle: "none",
+            padding: 0,
+          }}
+        >
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
           {isAuthenticated ? (
             <>
-              <li><Link to="/admin">Admin</Link></li>
-              <li><button onClick={logout}>Log Out</button></li>
+              <li>
+                <Link to="/admin">Admin</Link>
+              </li>
+              <li>
+                <button onClick={logout}>Log Out</button>
+              </li>
             </>
           ) : (
-            <li><Link to="/login">Log In</Link></li>
+            <li>
+              <Link to="/login">Log In</Link>
+            </li>
           )}
         </ul>
       </nav>
@@ -46,14 +66,20 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/products" element={<ProductsPage />} />
-            <Route path="/products/:productId" element={<ProductDetailPage />} />
+            <Route
+              path="/products/:productId"
+              element={<ProductDetailPage />}
+            />
             <Route path="/blog" element={<BlogIndexPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
-            <Route path="/admin" element={
-              <ProtectedRoute>
-                <AdminPage />
-              </ProtectedRoute>
-            } />
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <AdminPage />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </motion.div>
       </AnimatePresence>
