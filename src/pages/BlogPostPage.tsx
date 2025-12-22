@@ -1,6 +1,6 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { posts } from '../lib/posts';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { posts } from "../lib/posts";
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
