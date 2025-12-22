@@ -1,15 +1,11 @@
-import React from "react";
-
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   return (
     <div>
-      <h1>About This Blog</h1>
+      <h2>About</h2>
       <p>
-        This is a simple blog application built with React and React Router for
-        learning purposes. Here you can find posts, product info, and more!
+        This project demonstrates React Router dynamic routes and a basic auth
+        system using React Context.
       </p>
     </div>
   );
-};
-
-export default AboutPage;
+}

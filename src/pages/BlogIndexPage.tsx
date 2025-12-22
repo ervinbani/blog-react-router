@@ -1,11 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { posts } from "../lib/posts";
 
-const BlogIndexPage: React.FC = () => {
+export default function BlogIndexPage() {
   return (
     <div>
-      <h1>Blog Posts</h1>
+      <h2>Blog</h2>
+      <p>Select a post:</p>
+
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
@@ -15,6 +16,4 @@ const BlogIndexPage: React.FC = () => {
       </ul>
     </div>
   );
-};
-
-export default BlogIndexPage;
+}

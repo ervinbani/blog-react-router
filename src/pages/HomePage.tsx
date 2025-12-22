@@ -1,12 +1,19 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to the Blog!</h1>
-      <p>This is the Home Page. Explore posts, products, and more.</p>
+      <h2>Home</h2>
+      <p>This is a simple SPA demo.</p>
+
+      <ul>
+        <li>
+          <Link to="/blog">Go to Blog</Link>
+        </li>
+        <li>
+          <Link to="/login">Go to Login</Link>
+        </li>
+      </ul>
     </div>
   );
-};
-
-export default HomePage;
+}

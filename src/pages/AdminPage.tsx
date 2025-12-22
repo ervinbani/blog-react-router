@@ -1,15 +1,15 @@
-import React from "react";
+import { useAuth } from "../context/AuthContext";
 
-const AdminPage: React.FC = () => {
+export default function AdminPage() {
+  const { isAuthenticated } = useAuth();
+
   return (
     <div>
-      <h1>Admin Dashboard</h1>
+      <h2>Admin</h2>
+      <p>Welcome to the Admin Dashboard.</p>
       <p>
-        Welcome to the Admin Dashboard. Only authenticated users can see this
-        page.
+        Authenticated: <strong>{isAuthenticated ? "Yes" : "No"}</strong>
       </p>
     </div>
   );
-};
-
-export default AdminPage;
+}
